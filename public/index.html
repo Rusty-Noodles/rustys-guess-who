@@ -66,7 +66,7 @@
     <div id="menu-scene" class="scene hidden">
       <div id="menu-top-left">
         <img src="img/logo-no-bg.png" alt="UTDR Guess Who Unlimited Logo" id="menu-logo" class="small-bottom-margin">
-        <p id="menu-version-line" class="med-left-margin">v1.2.1 - <a target="_blank"
+        <p id="menu-version-line" class="med-left-margin">v1.3.0 - <a target="_blank"
             href="https://github.com/wearsnomask/utdr-guess-who/blob/main/CHANGELOG.md#v10">What's new?</a></p>
         <p id="menu-name-display" class="med-left-margin">
           <span class="grey-text">Chosen name: </span>
@@ -163,7 +163,7 @@
         <div id="your-char-display" class="center-container">
 
           <p class="center-text">YOU ARE:</p>
-          <p id="your-char-name" class="selectable"></p>
+          <p id="your-char-name"></p>
           <div id="your-card-set-classes">
             <div id="your-card-classes">
               <div id="your-char-img-frame" class="img-frame">
@@ -366,11 +366,40 @@
         </div>
 
         <div class="left-column">
-          <label tabindex="-1" for="remember-settings" id="card-scale-label" class="before-focusable">Remember
+          <div tabindex="1" id="bg-flavor-label" class="focusable">Background flavor:</div>
+        </div>
+        <div class="mid-column">
+          <select name="bg-flavor-select" id="bg-flavor-select" class="after-focusable" tabindex="-1">
+            <option value="grape" selected>Grape</option>
+            <option value="lime">Lime</option>
+            <option value="cherry">Cherry</option>
+            <option value="blueberry">Blueberry</option>
+            <option value="banana">Banana</option>
+            <option value="snowberry">Snowberry</option>
+          </select>
+        </div>
+        <div class="right-column empty"></div>
+
+        <div class="left-column">
+          <div tabindex="1" id="bg-style-label" class="focusable">Background style:</div>
+        </div>
+        <div class="mid-column">
+          <select name="bg-style-select" id="bg-style-select" class="after-focusable" tabindex="-1">
+            <option value="normal" selected>Normal</option>
+            <option value="slow">Slow</option>
+            <option value="veryslow">Very Slow</option>
+            <option value="static">Static</option>
+            <option value="blank">Blank</option>
+          </select>
+        </div>
+        <div class="right-column empty"></div>
+
+        <div class="left-column">
+          <label tabindex="1" for="remember-settings" id="remember-settings-label" class="focusable">Remember
             settings:</label>
         </div>
         <div class="mid-column">
-          <input type="checkbox" name="remember-settings" id="remember-settings" class="focusable" tabindex="1">
+          <input type="checkbox" name="remember-settings" id="remember-settings" class="after-focusable" tabindex="-1">
         </div>
         <div class="right-column empty"></div>
 
@@ -382,7 +411,7 @@
         </div>
         <div class="right-column empty"></div>
       </div>
-      <button id="settings-back" class="no-bottom-margin">Back</button>
+      <button id="settings-back" class="no-bottom-margin">Save</button>
     </div>
 
 
@@ -430,12 +459,12 @@
       </div>
       <div class="credits-item">
         <p>
-          See more credits in README at <a target="_blank"
+          See more credits in README at <a class="selectable" target="_blank"
             href="https://github.com/wearsnomask/utdr-guess-who">https://github.com/wearsnomask/utdr-guess-who</a>
         </p>
       </div>
 
-      <button id="credits-back" class="no-bottom-margin">Back</button>
+      <button id="credits-back" class="no-bottom-margin selectable">Back</button>
     </div>
 
   </div>

@@ -34,7 +34,13 @@ Try to get original sprites if possible, for the best quality - pixel art can ge
 
 ### Adding it to the game
 
-To be able to add any character sets to the game, fork this project, and set it up to be served publicly via GitHub Pages, using the option to deploy via a workflow (using the existing "static.yml" workflow - note that this workflow includes an extra step in it to run a script and set up some needed files). If you aren't familiar with using GitHub Pages, a good tutorial on using it is provided by The Odin Project here: https://www.theodinproject.com/lessons/foundations-recipes#viewing-your-project-on-the-web. Or if all of this working with a repo is something you aren't familiar with, other tutorials on this site can help you with that too.
+To be able to add any character sets to the game, fork this project, and set it up to be served publicly via GitHub Pages, setting the "Source" option to GitHub Actions (this will then use the existing "static.yml" workflow which does some required setup and serves the proper folder).
+
+![image](img/pages-source-setting.png)
+
+If you forget this step and change it later, you'll have to force the workflow to publish the site to re-trigger, either by making another change to anything within the "public" folder of the project (you can simply add or remove a space to "public/index.html") or by triggering it yourself from the Actions tab of the project.
+
+If you aren't familiar with using GitHub Pages, a good tutorial on using it is provided by The Odin Project here: https://www.theodinproject.com/lessons/foundations-recipes#viewing-your-project-on-the-web. Or if all of this working with a repo is something you aren't familiar with, other tutorials on this site can help you with that too.
 
 Then, edit the repo by adding in a folder with your character set in the "public/character-sets" folder. The name of the folder will be used exactly as it for the name of the character set. If you want (but you probably don't need to worry about this), you can add an index before the name of the character set in the folder to affect how it's sorted when the options are given to the player, e.g. folders named `1-Undertale` and `2-Deltarune` will put the Undertale character set first, whereas without the indices it would sort alphabetically with Deltarune first.
 
@@ -197,6 +203,8 @@ No substantial differences, just some minor necessary styling differences due to
 **Undertale Yellow:** [Team Undertale Yellow](https://undertaleyellow.wiki.gg/wiki/Developers)
 
 * [Undertale Yellow](https://gamejolt.com/games/UndertaleYellow/136925)
+
+**Deltarune Chapter 1-5 Character Set:** [TomatoRadio](https://github.com/TomatoRadio)
 
 **Font:** m6x11 by [Daniel Linssen](https://managore.itch.io/) (https://managore.itch.io/m6x11)
 
